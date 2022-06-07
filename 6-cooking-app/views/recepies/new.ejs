@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include("../partials/head") %>
+  </head>
+  <body>
+    <%- include("../partials/navbar") %>
+    <div class="container">
+      <h1>Enter Data for New Recepie</h1>
+
+      <form action="/add-recepie" method="post">
+        <input type="text" placeholder="Enter Title" name="title" />
+        <br />
+        <br />
+        <textarea
+          name="text"
+          id=""
+          cols="30"
+          rows="3"
+          placeholder="Enter Description"
+        ></textarea>
+        <br />
+        <br />
+        <input type="text" placeholder="Image URL" name="img" />
+        <br />
+        <br />
+        <input type="number" placeholder="Enter Id" name="id" />
+
+        <br />
+        <br />
+
+        <button class="btn btn-success">Submit</button>
+      </form>
+    </div>
+
+    <%- include("../partials/footer") %>
+  </body>
+</html>
