@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include("../partials/head") %>
+  </head>
+  <body>
+    <%- include("../partials/navbar") %>
+    <div class="container">
+      <h1>Enter Data for New Recepie</h1>
+
+      <form action="/recepie-update/<%= foundRecepie.id %> " method="post">
+        <input
+          type="text"
+          placeholder="Enter Title"
+          name="title"
+          value="<%= foundRecepie.title %> "
+        />
+        <br />
+        <br />
+        <textarea
+          name="text"
+          id=""
+          cols="30"
+          rows="3"
+          placeholder="Enter Description"
+        >
+<%= foundRecepie.text %> </textarea
+        >
+        <br />
+        <br />
+        <input
+          type="text"
+          placeholder="Image URL"
+          name="img"
+          value="<%= foundRecepie.img %> "
+        />
+        <br />
+        <br />
+
+        <button class="btn btn-success">Submit</button>
+      </form>
+    </div>
+
+    <%- include("../partials/footer") %>
+  </body>
+</html>

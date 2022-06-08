@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include("../partials/head") %>
+  </head>
+  <body>
+    <%- include("../partials/navbar") %>
+
+    <div class="container">
+      <h1><%= foundRecepie.title %></h1>
+      <img src="<%= foundRecepie.img %> " alt="" />
+      <br />
+      <br />
+
+      <a href="/recepie-edit/<%= foundRecepie.id %> ">edit</a>
+
+      <a href="/recepie-delete/<%= foundRecepie.id %>">Delete</a>
+    </div>
+
+    <%- include("../partials/footer") %>
+  </body>
+</html>
